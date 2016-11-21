@@ -25,7 +25,7 @@ class SearchViewController: UIViewController {
     }
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.contentInset = UIEdgeInsets(top: 20 + 44, left: 0, bottom: 0, right: 0)
+            tableView.contentInset = UIEdgeInsets(top: 20 + 44 + 44, left: 0, bottom: 0, right: 0)
             tableView.dataSource = self
             tableView.delegate = self
             tableView.rowHeight = 80
@@ -40,6 +40,7 @@ class SearchViewController: UIViewController {
             tableView.register(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.loadingCell)
         }
     }
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var searchResults: [SearchResult] = []
     var hasSearched = false
@@ -59,19 +60,31 @@ class SearchViewController: UIViewController {
     
     // MARK: Target Actions
     
-    
+    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+        performSearch()
+    }
     
     // MARK: Functions
     
     // Parse JSON from iTunes Store URL
-    func iTunesURL(searchText: String) -> URL {
+    func iTunesURL(searchText: String, category: Int) -> URL {
+        
+        var entityName: String
+        switch category {
+        case 1 : entityName = "musicTrack"
+        case 2 : entityName = "software"
+        case 3 : entityName = "ebook"
+        default : entityName = ""
+        }
+        
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "itunes.apple.com"
         urlComponents.path = "/search"
         let urlQueryItem1 = URLQueryItem(name: "term", value: searchText)
         let urlQueryItem2 = URLQueryItem(name: "limit", value: "200")
-        urlComponents.queryItems = [urlQueryItem1, urlQueryItem2]
+        let urlQueryItem3 = URLQueryItem(name: "entity", value: entityName)
+        urlComponents.queryItems = [urlQueryItem1, urlQueryItem2, urlQueryItem3]
         return urlComponents.url!
         
         /* Alternative approach: excapedSearchText
@@ -277,6 +290,10 @@ extension SearchViewController: UITableViewDelegate {
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        performSearch()
+    }
+    
+    func performSearch() {
         if !searchBar.text!.isEmpty {
             searchBar.resignFirstResponder()
             
@@ -288,7 +305,7 @@ extension SearchViewController: UISearchBarDelegate {
             hasSearched = true
             searchResults = []
             
-            let url = iTunesURL(searchText: searchBar.text!)
+            let url = iTunesURL(searchText: searchBar.text!, category: segmentedControl.selectedSegmentIndex)
             let session = URLSession.shared
             dataTask = session.dataTask(with: url, completionHandler: { (data, response, error) in
                 
