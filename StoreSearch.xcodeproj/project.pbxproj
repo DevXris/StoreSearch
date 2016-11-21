@@ -12,6 +12,7 @@
 		452DC5EE1DE29FFC00D9AEF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452DC5EC1DE29FFC00D9AEF8 /* Main.storyboard */; };
 		452DC5F01DE29FFC00D9AEF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452DC5EF1DE29FFC00D9AEF8 /* Assets.xcassets */; };
 		452DC5F31DE29FFC00D9AEF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452DC5F11DE29FFC00D9AEF8 /* LaunchScreen.storyboard */; };
+		452DC6001DE2A4B900D9AEF8 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452DC5FF1DE2A4B900D9AEF8 /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		452DC5EF1DE29FFC00D9AEF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		452DC5F21DE29FFC00D9AEF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		452DC5F41DE29FFC00D9AEF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		452DC5FF1DE2A4B900D9AEF8 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		452DC5FC1DE2A08E00D9AEF8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				452DC5FF1DE2A4B900D9AEF8 /* SearchResult.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				452DC5EB1DE29FFC00D9AEF8 /* SearchViewController.swift in Sources */,
+				452DC6001DE2A4B900D9AEF8 /* SearchResult.swift in Sources */,
 				452DC5E91DE29FFC00D9AEF8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +344,7 @@
 				452DC5F91DE29FFC00D9AEF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
