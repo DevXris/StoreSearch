@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gbi-2T-pVI">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gbi-2T-pVI" id="irH-Kx-Uu4">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZp-28-bKj">
+                        <rect key="frame" x="93" y="9" width="135.5" height="61"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bAm-ff-Ibz">
+                                <rect key="frame" x="95.5" y="21" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuw-zD-xzA">
+                                <rect key="frame" x="20" y="20" width="67.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bAm-ff-Ibz" firstAttribute="leading" secondItem="wuw-zD-xzA" secondAttribute="trailing" constant="8" id="1Wu-Pv-iZO"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="bAm-ff-Ibz" secondAttribute="bottom" constant="12" id="21U-cI-T4w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bAm-ff-Ibz" secondAttribute="trailing" constant="12" id="2AN-Lp-Xgp"/>
+                            <constraint firstItem="wuw-zD-xzA" firstAttribute="top" secondItem="zZp-28-bKj" secondAttribute="topMargin" constant="12" id="aHq-Ct-lks"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="wuw-zD-xzA" secondAttribute="bottom" constant="12" id="jvA-lm-7Fg"/>
+                            <constraint firstItem="bAm-ff-Ibz" firstAttribute="top" secondItem="zZp-28-bKj" secondAttribute="topMargin" constant="13" id="pjF-b9-br2"/>
+                            <constraint firstItem="wuw-zD-xzA" firstAttribute="leading" secondItem="zZp-28-bKj" secondAttribute="leadingMargin" constant="12" id="voF-ER-WQ5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zZp-28-bKj" firstAttribute="centerX" secondItem="irH-Kx-Uu4" secondAttribute="centerX" id="1A5-Km-HEB"/>
+                    <constraint firstItem="zZp-28-bKj" firstAttribute="centerY" secondItem="irH-Kx-Uu4" secondAttribute="centerY" id="SKI-w2-W2L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-82" y="-5"/>
+        </tableViewCell>
+    </objects>
+</document>
