@@ -15,6 +15,8 @@
 		4516CCDB1DE2E635009ECC07 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4516CCDA1DE2E635009ECC07 /* DetailViewController.swift */; };
 		4516CCDD1DE2E7D9009ECC07 /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4516CCDC1DE2E7D9009ECC07 /* DimmingPresentationController.swift */; };
 		4516CCDF1DE2FE01009ECC07 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4516CCDE1DE2FE01009ECC07 /* GradientView.swift */; };
+		4516CCE11DE33DFE009ECC07 /* BounceAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4516CCE01DE33DFE009ECC07 /* BounceAnimationController.swift */; };
+		4516CCE31DE341E5009ECC07 /* SlideOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4516CCE21DE341E5009ECC07 /* SlideOutAnimationController.swift */; };
 		452DC5E91DE29FFC00D9AEF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452DC5E81DE29FFC00D9AEF8 /* AppDelegate.swift */; };
 		452DC5EB1DE29FFC00D9AEF8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452DC5EA1DE29FFC00D9AEF8 /* SearchViewController.swift */; };
 		452DC5EE1DE29FFC00D9AEF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452DC5EC1DE29FFC00D9AEF8 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		4516CCDA1DE2E635009ECC07 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4516CCDC1DE2E7D9009ECC07 /* DimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
 		4516CCDE1DE2FE01009ECC07 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		4516CCE01DE33DFE009ECC07 /* BounceAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounceAnimationController.swift; sourceTree = "<group>"; };
+		4516CCE21DE341E5009ECC07 /* SlideOutAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOutAnimationController.swift; sourceTree = "<group>"; };
 		452DC5E51DE29FFC00D9AEF8 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452DC5E81DE29FFC00D9AEF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		452DC5EA1DE29FFC00D9AEF8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				452DC5EA1DE29FFC00D9AEF8 /* SearchViewController.swift */,
 				4516CCDA1DE2E635009ECC07 /* DetailViewController.swift */,
 				4516CCDC1DE2E7D9009ECC07 /* DimmingPresentationController.swift */,
+				4516CCE01DE33DFE009ECC07 /* BounceAnimationController.swift */,
+				4516CCE21DE341E5009ECC07 /* SlideOutAnimationController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -207,10 +213,12 @@
 				4516CCDD1DE2E7D9009ECC07 /* DimmingPresentationController.swift in Sources */,
 				452DC6001DE2A4B900D9AEF8 /* SearchResult.swift in Sources */,
 				4516CCD31DE2C0DC009ECC07 /* SearchResultCell.swift in Sources */,
+				4516CCE11DE33DFE009ECC07 /* BounceAnimationController.swift in Sources */,
 				4516CCDB1DE2E635009ECC07 /* DetailViewController.swift in Sources */,
 				452DC5E91DE29FFC00D9AEF8 /* AppDelegate.swift in Sources */,
 				4516CCDF1DE2FE01009ECC07 /* GradientView.swift in Sources */,
 				4516CCD91DE2E1DE009ECC07 /* UIImageView+DownloadImage.swift in Sources */,
+				4516CCE31DE341E5009ECC07 /* SlideOutAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

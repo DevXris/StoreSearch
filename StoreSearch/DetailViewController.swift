@@ -57,6 +57,12 @@ class DetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func openInStore() {
+        if let url = URL(string: searchResult.storeURL) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
     // MARK: Functions
     
     func updateUI() {
@@ -102,6 +108,13 @@ extension DetailViewController: UIViewControllerTransitioningDelegate {
         return DimmingPresentationController(presentedViewController: presented, presenting: presenting)
     }
     
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return BounceAnimationController()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideOutAnimationController()
+    }
 }
 
 // MARK: UIGestureRecognizerDelegate

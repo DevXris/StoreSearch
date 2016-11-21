@@ -150,6 +150,9 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                         <state key="normal" title="$9.99" backgroundImage="PriceButton"/>
+                                        <connections>
+                                            <action selector="openInStore" destination="POS-2r-ry3" eventType="touchUpInside" id="Fgp-fG-moU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
