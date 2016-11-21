@@ -9,6 +9,14 @@
 import UIKit
 
 class SearchResultCell: UITableViewCell {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let selectedView = UIView(frame: CGRect.zero)
+        selectedView.backgroundColor = UIColor(red: 255/255, green: 88/255, blue: 85/255, alpha: 0.5)
+        selectedBackgroundView = selectedView
+    }
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!

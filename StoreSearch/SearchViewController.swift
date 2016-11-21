@@ -47,7 +47,8 @@ class SearchViewController: UIViewController {
     // MARK: ViewController Life Cycles
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
+        searchBar.becomeFirstResponder()
     }
     
     // MARK: Target Actions
