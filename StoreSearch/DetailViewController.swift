@@ -20,7 +20,13 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var priceButton: UIButton!
     
-    var searchResult: SearchResult!
+    var searchResult: SearchResult! {
+        didSet {
+            if isViewLoaded {
+                updateUI()
+            }
+        }
+    }
     var downloadTask: URLSessionDownloadTask?
     
     enum AnimationStyle {
@@ -28,6 +34,8 @@ class DetailViewController: UIViewController {
         case fade
     }
     var dismissAnimationStyle = AnimationStyle.fade
+    
+    var isPopUp = false
     
     // MARK: Initializations
     
@@ -43,17 +51,27 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.clear
+        
         view.tintColor = UIColor(red: 221/255, green: 44/255, blue: 0, alpha: 0.87)
         popupView.layer.cornerRadius = 10
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(close))
-        tap.cancelsTouchesInView = false
-        tap.delegate = self
-        view.addGestureRecognizer(tap)
-        
         if searchResult != nil {
             updateUI()
+        }
+        
+        if isPopUp {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(close))
+            tap.cancelsTouchesInView = false
+            tap.delegate = self
+            view.addGestureRecognizer(tap)
+            view.backgroundColor = UIColor.clear
+        } else {
+            view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "LandscapeBackground"))
+            popupView.isHidden = true
+            
+            if let displayName = Bundle.main.localizedInfoDictionary?["CFBundleDisplayName"] as? String {
+                title = displayName
+            }
         }
     }
     
@@ -94,6 +112,8 @@ class DetailViewController: UIViewController {
         if let largeURL = URL(string: searchResult.artworkLargeURL) {
             downloadTask = artworkImageView.loadImage(url: largeURL)
         }
+        
+        popupView.isHidden = false
     }
     
     // MARK: Navigation
