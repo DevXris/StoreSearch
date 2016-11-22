@@ -242,6 +242,8 @@ class SearchViewController: UIViewController {
         landscapeViewController = storyboard?.instantiateViewController(withIdentifier: "LandscapeViewController") as? LandscapeViewController
         if let controller = landscapeViewController {
             
+            controller.searchResults = searchResults // transfer data object to LanscapeViewController
+            
             controller.view.frame = view.bounds
             controller.view.alpha = 0
             
