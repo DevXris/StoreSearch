@@ -85,6 +85,9 @@ class Search {
     private func iTunesURL(searchText: String, category: Category) -> URL {
         
         let entityName = category.entityName
+        let locale = Locale.autoupdatingCurrent
+        let language = locale.identifier
+        let countryCode = locale.regionCode ?? "en_US"
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -93,7 +96,10 @@ class Search {
         let urlQueryItem1 = URLQueryItem(name: "term", value: searchText)
         let urlQueryItem2 = URLQueryItem(name: "limit", value: "200")
         let urlQueryItem3 = URLQueryItem(name: "entity", value: entityName)
-        urlComponents.queryItems = [urlQueryItem1, urlQueryItem2, urlQueryItem3]
+        let urlQueryItem4 = URLQueryItem(name: "lang", value: language)
+        let urlQueryItem5 = URLQueryItem(name: "country", value: countryCode)
+        urlComponents.queryItems = [urlQueryItem1, urlQueryItem2, urlQueryItem3, urlQueryItem4, urlQueryItem5]
+        print(urlComponents.url!)
         return urlComponents.url!
         
         /* Alternative approach: excapedSearchText
