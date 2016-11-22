@@ -56,8 +56,8 @@ class LandscapeViewController: UIViewController {
             
             switch search.state {
             case .notSearchedYet : break
-            case .loading : break
-            case .noResults : break
+            case .loading : showSpinner()
+            case .noResults : showNothingFoundLabel()
             case .results(let list) : tileButtons(list)
             }
         }
@@ -149,6 +149,45 @@ class LandscapeViewController: UIViewController {
             downloadTask.resume()
             downloadTasks.append(downloadTask)
         }
+    }
+    
+    private func showSpinner() {
+        let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        spinner.center = CGPoint(x: scrollView.bounds.midX + 0.5, y: scrollView.bounds.midY + 0.5)
+        spinner.tag = 1000
+        view.addSubview(spinner)
+        spinner.startAnimating()
+    }
+    
+    private func hideSpinner() {
+        view.viewWithTag(1000)?.removeFromSuperview()
+    }
+    
+    func searchResultsReceived() {
+        hideSpinner()
+        
+        switch search.state {
+        case .notSearchedYet, .loading : break
+        case .noResults : showNothingFoundLabel()
+        case .results(let list) : tileButtons(list)
+        }
+    }
+    
+    private func showNothingFoundLabel() {
+        let label = UILabel(frame: CGRect.zero)
+        label.text = "Nothing Found"
+        label.textColor = UIColor.white
+        label.backgroundColor = UIColor.clear
+        
+        label.sizeToFit()
+        
+        var rect = label.frame
+        rect.size.width = ceil(rect.size.width/2) * 2
+        rect.size.height = ceil(rect.size.height/2) * 2
+        label.frame = rect
+        
+        label.center = CGPoint(x: scrollView.bounds.midX, y: scrollView.bounds.midY)
+        view.addSubview(label)
     }
     
     // MARK: Navigation
