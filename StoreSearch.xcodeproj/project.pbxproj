@@ -20,6 +20,7 @@
 		4516CCE91DE3F1B0009ECC07 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4516CCE81DE3F1B0009ECC07 /* Search.swift */; };
 		4516CCEA1DE41292009ECC07 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4516CCEC1DE41292009ECC07 /* NothingFoundCell.xib */; };
 		4516CCEE1DE41416009ECC07 /* LocadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4516CCF01DE41416009ECC07 /* LocadingCell.xib */; };
+		4516CCFA1DE42C03009ECC07 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4516CCF81DE42C03009ECC07 /* Localizable.strings */; };
 		452DC5E91DE29FFC00D9AEF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452DC5E81DE29FFC00D9AEF8 /* AppDelegate.swift */; };
 		452DC5EB1DE29FFC00D9AEF8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452DC5EA1DE29FFC00D9AEF8 /* SearchViewController.swift */; };
 		452DC5EE1DE29FFC00D9AEF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452DC5EC1DE29FFC00D9AEF8 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		4516CCEF1DE41416009ECC07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LocadingCell.xib; sourceTree = "<group>"; };
 		4516CCF21DE41427009ECC07 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LocadingCell.strings"; sourceTree = "<group>"; };
 		4516CCF41DE414D3009ECC07 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		4516CCF91DE42C03009ECC07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		452DC5E51DE29FFC00D9AEF8 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452DC5E81DE29FFC00D9AEF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		452DC5EA1DE29FFC00D9AEF8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				452DC5EF1DE29FFC00D9AEF8 /* Assets.xcassets */,
 				452DC5F41DE29FFC00D9AEF8 /* Info.plist */,
+				4516CCF81DE42C03009ECC07 /* Localizable.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				452DC5F01DE29FFC00D9AEF8 /* Assets.xcassets in Resources */,
+				4516CCFA1DE42C03009ECC07 /* Localizable.strings in Resources */,
 				4516CCEE1DE41416009ECC07 /* LocadingCell.xib in Resources */,
 				4516CCD11DE2BEB3009ECC07 /* SearchResultCell.xib in Resources */,
 				4516CCEA1DE41292009ECC07 /* NothingFoundCell.xib in Resources */,
@@ -257,6 +261,14 @@
 				4516CCF21DE41427009ECC07 /* zh-Hant */,
 			);
 			name = LocadingCell.xib;
+			sourceTree = "<group>";
+		};
+		4516CCF81DE42C03009ECC07 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4516CCF91DE42C03009ECC07 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		452DC5EC1DE29FFC00D9AEF8 /* Main.storyboard */ = {
