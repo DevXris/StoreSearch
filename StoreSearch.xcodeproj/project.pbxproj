@@ -22,6 +22,7 @@
 		4516CCEE1DE41416009ECC07 /* LocadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4516CCF01DE41416009ECC07 /* LocadingCell.xib */; };
 		4516CCFA1DE42C03009ECC07 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4516CCF81DE42C03009ECC07 /* Localizable.strings */; };
 		4516CCFD1DE42EDB009ECC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4516CCFF1DE42EDB009ECC07 /* InfoPlist.strings */; };
+		4516CD041DE52CC4009ECC07 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4516CD031DE52CC4009ECC07 /* MenuViewController.swift */; };
 		452DC5E91DE29FFC00D9AEF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452DC5E81DE29FFC00D9AEF8 /* AppDelegate.swift */; };
 		452DC5EB1DE29FFC00D9AEF8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452DC5EA1DE29FFC00D9AEF8 /* SearchViewController.swift */; };
 		452DC5EE1DE29FFC00D9AEF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452DC5EC1DE29FFC00D9AEF8 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		4516CCF91DE42C03009ECC07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4516CCFE1DE42EDB009ECC07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4516CD001DE42EDD009ECC07 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		4516CD031DE52CC4009ECC07 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		452DC5E51DE29FFC00D9AEF8 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452DC5E81DE29FFC00D9AEF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		452DC5EA1DE29FFC00D9AEF8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				4516CCE21DE341E5009ECC07 /* SlideOutAnimationController.swift */,
 				4516CCE61DE34ADF009ECC07 /* FadeOutAnimationController.swift */,
 				4516CCE41DE344C6009ECC07 /* LandscapeViewController.swift */,
+				4516CD031DE52CC4009ECC07 /* MenuViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				4516CCE91DE3F1B0009ECC07 /* Search.swift in Sources */,
 				452DC5EB1DE29FFC00D9AEF8 /* SearchViewController.swift in Sources */,
 				4516CCDD1DE2E7D9009ECC07 /* DimmingPresentationController.swift in Sources */,
+				4516CD041DE52CC4009ECC07 /* MenuViewController.swift in Sources */,
 				4516CCE71DE34ADF009ECC07 /* FadeOutAnimationController.swift in Sources */,
 				452DC6001DE2A4B900D9AEF8 /* SearchResult.swift in Sources */,
 				4516CCD31DE2C0DC009ECC07 /* SearchResultCell.swift in Sources */,

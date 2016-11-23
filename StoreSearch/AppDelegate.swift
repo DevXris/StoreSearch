@@ -47,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
         searchViewController.splitViewDetail = detailViewController
+        
+        splitViewController.delegate = self
         return true
     }
 
@@ -71,7 +73,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
+extension AppDelegate: UISplitViewControllerDelegate {
+    func splitViewController(_ svc: UISplitViewController, willChangeTo displayMode: UISplitViewControllerDisplayMode) {
+        print(#function)
+        if displayMode == .primaryOverlay {
+            svc.dismiss(animated: true, completion: nil)
+        }
+    }
+}
